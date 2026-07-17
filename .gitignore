@@ -1,4 +1,46 @@
+# Build outputs
 build/
-.idea/
-.DS_Store
+cmake-build-*/
+server/build/
+Makefile
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
 
+# Generated artifacts
+outputs/
+*.inspect.ndjson
+
+# Local configuration and secrets
+server/config/app.yaml
+server/config/*.local.yaml
+.env
+.env.*
+!.env.example
+
+# IDE / OS files
+.idea/
+.vscode/
+.DS_Store
+*.user
+*.swp
+
+# Runtime data and logs
+*.log
+server/data/
+server/logs/
+*.pid
+*.sqlite
+*.sqlite3
+
+# Local database dumps
+*.sql.gz
+*.dump

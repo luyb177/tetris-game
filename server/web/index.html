@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sand Tetris</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+<a class="brand" href="/">SAND<span>TETRIS</span>
+</a>
+<nav>
+<a href="#game">开始游戏</a>
+<a href="#ranking">排行榜</a>
+<button id="navLogin" class="nav-account">登录</button>
+</nav>
+</header>
+  <main>
+    <section class="hero">
+<div>
+<p class="eyebrow">GRAVITY PUZZLE</p>
+<h1>把方块变成<br>
+<span>流动的沙粒</span>
+</h1>
+<p class="lead">游客可以立即开始；登录后保存成绩，挑战全球排行榜。</p>
+<div class="actions">
+<a class="primary" id="heroPlay" href="/game.html">开始游戏</a>
+<button class="ghost" id="registerBtn">注册并保存成绩</button>
+</div>
+<p class="hero-hint" id="heroHint">无需注册也可以游玩，登录后成绩将自动保存。</p>
+</div>
+<div class="hero-art">
+<div class="art-label">SAND<br>
+<span>MODE</span>
+</div>
+<div class="sand sand-a">
+</div>
+<div class="sand sand-b">
+</div>
+<div class="sand sand-c">
+</div>
+<div class="piece">◆</div>
+</div>
+</section>
+    <section class="features">
+<article>
+<b>01</b>
+<h3>重力沙粒</h3>
+<p>方块落地后拆分成细小颗粒，自然下落并堆积。</p>
+</article>
+<article>
+<b>02</b>
+<h3>游客模式</h3>
+<p>无需账号即可开始游戏，分数只保留在本次游戏中。</p>
+</article>
+<article>
+<b>03</b>
+<h3>云端排行</h3>
+<p>登录后上传分数，查看自己的成绩和排行榜。</p>
+</article>
+</section>
+    <section class="panel play-panel" id="game">
+<div>
+<p class="eyebrow">PLAY NOW</p>
+<h2>准备好开始了吗？</h2>
+<p id="playDescription">现在可以直接在浏览器中游玩。</p>
+</div>
+<a class="primary" id="playNow" href="/game.html">进入游戏</a>
+</section>
+    <section class="panel ranking" id="ranking">
+<div class="section-title">
+<div>
+<p class="eyebrow">LEADERBOARD</p>
+<h2>排行榜</h2>
+<p class="ranking-status" id="rankingStatus">正在加载成绩…</p>
+</div>
+<button class="ghost" id="refreshRanking">刷新</button>
+</div>
+<div id="rankingList" class="ranking-list">
+<span class="muted">正在加载排行榜…</span>
+</div>
+</section>
+  </main>
+  <div class="modal hidden" id="authModal">
+<div class="modal-card">
+<button class="close" id="closeModal">×</button>
+<div class="tabs">
+<button class="tab active" data-tab="login">登录</button>
+<button class="tab" data-tab="register">注册</button>
+</div>
+<form id="loginForm">
+<p class="eyebrow">WELCOME BACK</p>
+<h2>欢迎回来</h2>
+<p class="modal-copy">登录后你的成绩会自动保存到排行榜。</p>
+<input id="loginEmail" type="email" placeholder="邮箱" required>
+<input id="loginPassword" type="password" placeholder="密码" required>
+<button class="primary full">登录并开始游戏</button>
+</form>
+<form id="registerForm" class="hidden">
+<p class="eyebrow">JOIN THE BOARD</p>
+<h2>创建账号</h2>
+<p class="modal-copy">注册后即可保存成绩，和大家一起挑战。</p>
+<input id="regEmail" type="email" placeholder="邮箱" required>
+<input id="regName" placeholder="昵称" required>
+<input id="regPassword" type="password" placeholder="密码" required>
+<div class="code-row">
+<input id="regCode" placeholder="验证码" required>
+<button type="button" class="ghost" id="sendCode">发送验证码</button>
+</div>
+<button class="primary full">注册并开始游戏</button>
+</form>
+<p id="formMessage" class="form-message">
+</p>
+</div>
+</div>
+  <script src="/app.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sand Tetris Game</title>
+<link rel="stylesheet" href="/styles.css">
+<style>body{background:#080b12}.game-page{max-width:980px;margin:24px auto;padding:0 22px}.game-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.game-head a{color:#64e3ff;text-decoration:none}.game-user{color:#ffd45c}.game-layout{display:grid;grid-template-columns:minmax(300px,520px) 250px;gap:24px;align-items:start}.game-card{background:#111a2c;border:1px solid #2b405f;border-radius:18px;padding:16px}.game-card canvas{display:block;width:100%;height:auto;max-height:calc(100vh - 150px);object-fit:contain;background:#05070b;border-radius:10px;image-rendering:pixelated}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.stat{padding:13px;background:#1b2942;border-radius:10px}.stat small{display:block;color:#9aa9c2}.stat strong{font-size:26px;color:#ffd45c}.controls{color:#9aa9c2;line-height:2}.game-note{color:#9aa9c2;font-size:13px;line-height:1.6}.save-status{min-height:22px;color:#64e3ff;font-size:13px}.finish{width:100%;margin-top:10px;background:#3a2940;color:#ffb6b6;border:1px solid #81505f;border-radius:9px;padding:11px;cursor:pointer}.finish:disabled{opacity:.5;cursor:not-allowed}@media(max-width:760px){.game-layout{grid-template-columns:1fr}.game-page{margin:10px auto}}</style>
+</head>
+<body>
+<div class="game-page">
+<div class="game-head">
+<a href="/">← 返回首页</a>
+<strong>SAND TETRIS</strong>
+<span class="game-user" id="mode">游客模式</span>
+</div>
+<div class="game-layout">
+<div class="game-card">
+<canvas id="game" width="400" height="760">
+</canvas>
+</div>
+<aside>
+<div class="stats">
+<div class="stat">
+<small>SCORE</small>
+<strong id="score">0</strong>
+</div>
+<div class="stat">
+<small>LEVEL</small>
+<strong id="level">1</strong>
+</div>
+<div class="stat">
+<small>LAYERS</small>
+<strong id="layers">0</strong>
+</div>
+<div class="stat">
+<small>NEXT</small>
+<strong id="next">—</strong>
+</div>
+</div>
+<div class="game-card controls">
+<b>操作</b>
+<br>← → 移动<br>↑ 旋转<br>↓ 加速下落<br>Space 硬降<br>R 重新开始</div>
+<p class="game-note" id="gameNote">游客可以完整游玩；登录后成绩会自动上传排行榜。</p>
+<p class="save-status" id="saveStatus">
+</p>
+<button class="primary" id="restart">重新开始</button>
+<button class="finish" id="finishGame">结束本局并保存</button>
+</aside>
+</div>
+</div>
+<script src="/game.js">
+</script>
+</body>
+</html>

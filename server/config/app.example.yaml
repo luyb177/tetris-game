@@ -1,0 +1,16 @@
+server:
+  host: 127.0.0.1
+  port: 8080
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  password: change-me
+  database: tetris
+email:
+  enabled: false
+  from: your-mail@qq.com
+  password: smtp-app-password
+  smtp_host: smtp.qq.com
+  smtp_port: 465
+
